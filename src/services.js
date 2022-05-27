@@ -35,13 +35,25 @@ export function diaSemana (dia){
     throw new Error ('Digite um número de 0 à 6') 
 }
 
-export function sequenciaPar(limite){
-    let limi = [];
-    let pos = 0
-    for(let cont= 0; cont < limite; cont++){
-        if(cont % 2 == 0 && cont != 0){
-            limi[pos] = cont 
-            pos++
-        }
+export function fatorial(n){
+    let result=n;
+    let minicial=n-1;
+    for (let i=minicial;i> 1; i--){
+        result *= i;
     }
+    return result;
+}
+
+export function sequenciaPar(limite)
+{
+    let numeros = [];
+    let pos = 0;
+
+    for (let i = 0; i <= limite; i++)
+      if(i % 2 == 0 ) 
+      {
+          numeros[pos] = i
+          pos++;
+      }
+      return numeros;
 }
